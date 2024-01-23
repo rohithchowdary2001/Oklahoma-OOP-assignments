@@ -1,0 +1,71 @@
+//package carDealer;
+//
+//public class Test {
+//
+//	public static void main(String[] args) {
+//		Dealer dealer;
+//		Car car;
+//		dealer = new Dealer("David's car Lot","Edmond,OK");
+//		Car car1=new Car("jgsfdjsgafhsgah", "suzuki" ,"malibu",1976,"maroon", 45000);
+//		dealer.addCar(car1);
+//		Car car2=new Car("nhsdbfsh", "honda" ,"swift",1987,"gray", 45000);
+//		dealer.addCar(car2);
+//		Car car3=new Car("bnbncjdhbcd", "maruthi" ,"alto",2001,"green",45000);
+//		dealer.addCar(car3);
+//		Car car4=new Car("cbjhdbds", "kia" ,"ritz",1966,"red",45000);
+//		dealer.addCar(car4);
+//		System.out.println(dealer);
+//		for(int i=0;i<dealer.getcarCount();i++) {
+//			System.out.println(dealer.getCars()[i]);
+//		}
+//		dealer.removeCar(car2);
+//		System.out.println(dealer);
+//		for(int i=0;i<dealer.getcarCount();i++) {
+//			System.out.println(dealer.getCars()[i]);
+//		}
+//	}
+//
+//}
+
+package carDealer;
+
+public class Test {
+
+    public static void main(String[] args) {
+        Dealer dealer;
+        Car car;
+        dealer = new Dealer("David's car Lot", "Edmond,OK");
+        Car car1 = new Car("jgsfdjsgafhsgah", "suzuki", "malibu", 1976, "maroon", 45000);
+        dealer.addCar(car1);
+        Car car2 = new Car("nhsdbfsh", "honda", "swift", 1987, "gray", 45000);
+        dealer.addCar(car2);
+        Car car3 = new Car("bnbncjdhbcd", "maruthi", "alto", 2001, "green", 45000);
+        dealer.addCar(car3);
+        Car car4 = new Car("cbjhdbds", "kia", "ritz", 1966, "red", 45000);
+        dealer.addCar(car4);
+
+        // Print dealer information and cars
+        System.out.println(dealer);
+        for (int i = 0; i < dealer.getcarCount(); i++) {
+            System.out.println(dealer.getCars()[i]);
+        }
+
+        // Calculate and print the total price
+        double totalPrice = dealer.getTotalPrice();
+        System.out.println("Total Price of all cars: $" + totalPrice);
+
+        // Remove a car
+        dealer.removeCar(car2);
+
+        // Print updated dealer information and cars
+        System.out.println(dealer);
+        for (int i = 0; i < dealer.getcarCount(); i++) {
+            System.out.println(dealer.getCars()[i]);
+        }
+
+        // Calculate and print the updated total price
+        totalPrice = dealer.getTotalPrice();
+        System.out.println("Total Price of all cars: $" + totalPrice);
+    }
+}
+
